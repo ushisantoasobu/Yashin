@@ -64,7 +64,6 @@ public class Yashin : UIView {
         var rad :CGFloat = 2 * CGFloat(M_PI) * 3 / 4
 
         let scales :[CGFloat] = self.getScaleValues(self.minValue, self.maxValue)
-        print(scales)
 
         for (index, data) in self.list.enumerate() {
 
