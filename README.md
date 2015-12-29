@@ -26,9 +26,13 @@ class SomeViewController: UIViewController {
         self.view.addSubview(radarChart)
 
         radarChart.list = [
-            ("shoot", 72),
-            ("dribble", 82),
-            ("pass", 84)
+            ("shoot", 7),
+            ("pass", 9),
+            ("dribble", 5),
+            ("speed", 8),
+            ("power", 6),
+            ("stamina", 5),
+            ("mentality", 7)
         ]
     }
 }
@@ -37,23 +41,30 @@ class SomeViewController: UIViewController {
 ### Setting some properties
 
 ```Swift
+// param
 radarChart.maxValue = 100 // Max value of chart. Default is 10
-
 radarChart.minValue = 0 // Min value of chart. Default is 0
 
+// appearance
 radarChart.padding = 100 // Padding from chart to outline frame. Default is 60.0
-
-radarChart.fontSize = 9.0 // Font size. Default is 11.0
-
+radarChart.fontSize = 13.0 // Font size. Default is 11.0
 radarChart.scaleLineWidth = 4.0 // Scale-line width. Default is 2.0
-
 radarChart.scaleLineHidden = false // Scale-line hidden flag. Default is false
 
-radarChart.lineColor = UIColor.greenColor() // Color of chart outer-line. Default is XXX
+// color
+radarChart.lineColor = UIColor.brownColor() // Color of chart outer-line. Default is XXX
+radarChart.subLineColor = UIColor.lightGrayColor() // Color of chart inner-line. Default is XXX
+radarChart.fillColor = UIColor.cyanColor().colorWithAlphaComponent(0.30) // Color of chart fill. Default is XXX
 
-radarChart.subLineColor = UIColor.brownColor() // Color of chart inner-line. Default is XXX
-
-radarChart.fillColor = UIColor.blackColor().colorWithAlphaComponent(0.1) // Color of chart fill. Default is XXX
+radarChart.list = [
+    ("shoot", 70),
+    ("pass", 91),
+    ("dribble", 58),
+    ("speed", 84),
+    ("power", 67),
+    ("stamina", 56),
+    ("mentality", 78),
+]
 ```
 
 ## Requirements
