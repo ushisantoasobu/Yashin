@@ -23,11 +23,7 @@ class ViewController: UIViewController {
     }
 
     private func setupRadarChart() {
-        let radarChart = Yashin()
-        radarChart.frame = self.view.frame
-//        let radarChart = Yashin(coder: self.view.frame)
-        //        let radarChart = Yashin(frame: CGRectMake(80, 80, 240, 240))
-        //        let radarChart = Yashin(frame: CGRectMake(0, 0, 240, 240))
+        let radarChart = Yashin(frame: self.view.frame)
 
         radarChart.maxValue = 100
         radarChart.minValue = 0

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "46B618E94132F8DB7FF13247"
+               BlueprintIdentifier = "B0CA1F59A4577961D4B98754"
                BuildableName = "Yashin.framework"
                BlueprintName = "Yashin"
                ReferencedContainer = "container:Pods.xcodeproj">

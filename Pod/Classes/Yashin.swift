@@ -11,9 +11,9 @@ import UIKit
 
 public class Yashin : UIView {
 
-    public var list = [(name :String, value :Int)]()
-    public var minValue :Int = 0
-    public var maxValue :Int = 10
+    public var list = [(name :String, value :UInt)]()
+    public var minValue :UInt = 0
+    public var maxValue :UInt = 10
     public var padding :CGFloat = 60
     public var scaleLineWidth :CGFloat = 3.0
     public var scaleLineHidden = false
@@ -26,7 +26,7 @@ public class Yashin : UIView {
     public var subLineColor = UIColor.darkGrayColor().colorWithAlphaComponent(0.30)
     public var fillColor    = UIColor.darkGrayColor().colorWithAlphaComponent(0.20)
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.clearColor()
     }
@@ -173,7 +173,7 @@ public class Yashin : UIView {
         return CGPointMake(centerPoint.x + len * cos(rad), centerPoint.y + len * sin(rad))
     }
 
-    private func getScaleValues(minValue :Int, _ maxValue :Int) -> [CGFloat] {
+    private func getScaleValues(minValue :UInt, _ maxValue :UInt) -> [CGFloat] {
         var values = [CGFloat]()
         if (maxValue - minValue) <= 10 {
             for value in (minValue + 1)...(maxValue - 1) {

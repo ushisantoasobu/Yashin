@@ -21,26 +21,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		31D3A55C9D9443148E25F51C61E74E83 /* PBXContainerItemProxy */ = {
+		6693152F92CA7117FA62C796F446843A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 37BC4E00FAE3B2E7147C63DFAB7EDAB2;
 			remoteInfo = Yashin;
 		};
-		5877FB3533DCC11774505EBA181C4423 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 37BC4E00FAE3B2E7147C63DFAB7EDAB2;
-			remoteInfo = Yashin;
-		};
-		E961AB6048F4E473E7CEDEDAE17427EC /* PBXContainerItemProxy */ = {
+		B50B203543B617C3E7D02AF803313235 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3BF2B5759E3C151339770078704FCD21;
 			remoteInfo = "Yashin-Yashin";
+		};
+		F45799ED5E5452E26F690DC41F9E7756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37BC4E00FAE3B2E7147C63DFAB7EDAB2;
+			remoteInfo = Yashin;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -290,7 +290,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FD7C6484411035051F75DDB7F5A4AE9D /* PBXTargetDependency */,
+				65CA0C50977642AB50A97DBD1D37D18A /* PBXTargetDependency */,
 			);
 			name = Yashin;
 			productName = Yashin;
@@ -325,7 +325,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				387FFB002F635B6ACE2E19CF4FC310E3 /* PBXTargetDependency */,
+				D1863666E5E9F0B2E8642930A56C1E32 /* PBXTargetDependency */,
 			);
 			name = "Pods-Yashin_Example";
 			productName = "Pods-Yashin_Example";
@@ -343,7 +343,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				476ADA2F19F43C7CFC86079922AE93D4 /* PBXTargetDependency */,
+				71492920A1E6172A09F28E4E2A57ABF7 /* PBXTargetDependency */,
 			);
 			name = "Pods-Yashin_Tests";
 			productName = "Pods-Yashin_Tests";
@@ -433,23 +433,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		387FFB002F635B6ACE2E19CF4FC310E3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Yashin;
-			target = 37BC4E00FAE3B2E7147C63DFAB7EDAB2 /* Yashin */;
-			targetProxy = 31D3A55C9D9443148E25F51C61E74E83 /* PBXContainerItemProxy */;
-		};
-		476ADA2F19F43C7CFC86079922AE93D4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Yashin;
-			target = 37BC4E00FAE3B2E7147C63DFAB7EDAB2 /* Yashin */;
-			targetProxy = 5877FB3533DCC11774505EBA181C4423 /* PBXContainerItemProxy */;
-		};
-		FD7C6484411035051F75DDB7F5A4AE9D /* PBXTargetDependency */ = {
+		65CA0C50977642AB50A97DBD1D37D18A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Yashin-Yashin";
 			target = 3BF2B5759E3C151339770078704FCD21 /* Yashin-Yashin */;
-			targetProxy = E961AB6048F4E473E7CEDEDAE17427EC /* PBXContainerItemProxy */;
+			targetProxy = B50B203543B617C3E7D02AF803313235 /* PBXContainerItemProxy */;
+		};
+		71492920A1E6172A09F28E4E2A57ABF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Yashin;
+			target = 37BC4E00FAE3B2E7147C63DFAB7EDAB2 /* Yashin */;
+			targetProxy = F45799ED5E5452E26F690DC41F9E7756 /* PBXContainerItemProxy */;
+		};
+		D1863666E5E9F0B2E8642930A56C1E32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Yashin;
+			target = 37BC4E00FAE3B2E7147C63DFAB7EDAB2 /* Yashin */;
+			targetProxy = 6693152F92CA7117FA62C796F446843A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
