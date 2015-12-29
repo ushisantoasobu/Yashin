@@ -22,8 +22,7 @@ class SomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let radarChart = Yashin()
-        radarChart.frame = self.view.frame
+        let radarChart = Yashin(frame: self.view.frame))
         self.view.addSubview(radarChart)
 
         radarChart.list = [
