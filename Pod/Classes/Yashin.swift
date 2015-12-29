@@ -28,6 +28,7 @@ public class Yashin : UIView {
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        self.userInteractionEnabled = false
         self.backgroundColor = UIColor.clearColor()
     }
 
