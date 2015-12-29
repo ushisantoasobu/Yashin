@@ -38,6 +38,8 @@ class SomeViewController: UIViewController {
 }
 ```
 
+<img src="https://github.com/ushisantoasobu/Yashin/blob/master/screenshots/1.png" width="320">
+
 ### Setting some properties
 
 ```Swift
@@ -66,6 +68,8 @@ radarChart.list = [
     ("mentality", 78),
 ]
 ```
+
+<img src="https://github.com/ushisantoasobu/Yashin/blob/master/screenshots/2.png" width="320">
 
 ## Requirements
 
