@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'Yashin_Example', :exclusive => true do
+  pod "Yashin", :path => "../"
+end
+
+target 'Yashin_Tests', :exclusive => true do
+  pod "Yashin", :path => "../"
+
+  
+end
