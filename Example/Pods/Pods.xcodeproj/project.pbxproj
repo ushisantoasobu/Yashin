@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090E197C01B8719FBCCDA9B4EDA736D1 /* Yashin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 462A6CBB9AF36AB0E2755722B0673867 /* Yashin-dummy.m */; };
 		175EBFCEBC8D0410723C6B2539939DCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E07C1DB462F28BC1B3EEE67FFB2B7A8 /* Foundation.framework */; };
-		1A815E6DA13E7C937ABC62897E763DCD /* Yashin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7C300119CD6F8E154C2C451BC3E71 /* Yashin-dummy.m */; };
 		1BE1DF9A8C3718103E0B377121CE1DA4 /* Pods-Yashin_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9EEEC8DC9EB5A7E3DD8AF3AE2C3BE55 /* Pods-Yashin_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C368B88D96E050CF412D478789B9D44 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A787736D0D0C33F72549BE78F5B5601 /* ReplaceMe.swift */; };
 		38CB58578336076FC3C82BE08C5AD898 /* Yashin.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 52DEC409C030183DAB2ADAF4332E5EB8 /* Yashin.bundle */; };
 		423DA3980B7375FC3A5549BF7466D8F2 /* Pods-Yashin_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F76CD8754C1B8B9551BEE1FDD15EBC3 /* Pods-Yashin_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		505B5073B6DF7ECF8EC4AA37827F68AA /* Yashin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6D52B5E1E56C8830DD7B729D7DDFA9 /* Yashin.swift */; };
 		5E6DC09DB25E45E8B79319CE762D470B /* Pods-Yashin_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A237F2028C0ADC8BBB31127480DE576E /* Pods-Yashin_Tests-dummy.m */; };
 		91ADFD0557CD6533AA76B3B3D0F64E98 /* Pods-Yashin_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6D54C80E61952567E6596185F824B1 /* Pods-Yashin_Example-dummy.m */; };
 		EFBA72E0EECA555D137EE12CF1EBB0D7 /* Yashin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C6154703E0F46B5D7F7A2F9B8FF67D3 /* Yashin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,26 +21,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5A82383D2F56C5F6BFE4C80A0E7F50E7 /* PBXContainerItemProxy */ = {
+		31D3A55C9D9443148E25F51C61E74E83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 37BC4E00FAE3B2E7147C63DFAB7EDAB2;
 			remoteInfo = Yashin;
 		};
-		962DC38E5B016CBBF5D176053EBCA7B8 /* PBXContainerItemProxy */ = {
+		5877FB3533DCC11774505EBA181C4423 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37BC4E00FAE3B2E7147C63DFAB7EDAB2;
+			remoteInfo = Yashin;
+		};
+		E961AB6048F4E473E7CEDEDAE17427EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3BF2B5759E3C151339770078704FCD21;
 			remoteInfo = "Yashin-Yashin";
-		};
-		B04A3D10E130B9E766C613CA69221C54 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 37BC4E00FAE3B2E7147C63DFAB7EDAB2;
-			remoteInfo = Yashin;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,6 +58,7 @@
 		3E6D54C80E61952567E6596185F824B1 /* Pods-Yashin_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Yashin_Example-dummy.m"; sourceTree = "<group>"; };
 		3F76CD8754C1B8B9551BEE1FDD15EBC3 /* Pods-Yashin_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Yashin_Tests-umbrella.h"; sourceTree = "<group>"; };
 		461FFAC3F22977160090E2AA0CBAB408 /* Pods_Yashin_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yashin_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		462A6CBB9AF36AB0E2755722B0673867 /* Yashin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Yashin-dummy.m"; sourceTree = "<group>"; };
 		48101F1FFCF4AB073D8E212CA701C326 /* Pods-Yashin_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Yashin_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4A72E578686881F88899D5ABC3D4999E /* Pods-Yashin_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Yashin_Example.modulemap"; sourceTree = "<group>"; };
 		4A8B4AD6D754E6DD857297410A637D0C /* Yashin-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Yashin-Private.xcconfig"; sourceTree = "<group>"; };
@@ -69,12 +70,11 @@
 		7F84FAA7089C77323E64176741EDA0C2 /* Pods-Yashin_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Yashin_Example-resources.sh"; sourceTree = "<group>"; };
 		85EFF4C43AC0AB84A948F25E78823C26 /* Pods-Yashin_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Yashin_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8C3619DD13F9CAB7B91FF0630B88DBF0 /* Pods-Yashin_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Yashin_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9A787736D0D0C33F72549BE78F5B5601 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		9C0FA53C2F4A352B6CDEF12717DF488A /* Pods_Yashin_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yashin_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DD7C300119CD6F8E154C2C451BC3E71 /* Yashin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Yashin-dummy.m"; sourceTree = "<group>"; };
 		A237F2028C0ADC8BBB31127480DE576E /* Pods-Yashin_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Yashin_Tests-dummy.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C64C17AD5AB9FEE5FE67ED5AC6EF6CEC /* Pods-Yashin_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Yashin_Example.release.xcconfig"; sourceTree = "<group>"; };
+		DD6D52B5E1E56C8830DD7B729D7DDFA9 /* Yashin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Yashin.swift; sourceTree = "<group>"; };
 		E532EC72706708C527865539A43EF5F6 /* Pods-Yashin_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Yashin_Tests-resources.sh"; sourceTree = "<group>"; };
 		E9EEEC8DC9EB5A7E3DD8AF3AE2C3BE55 /* Pods-Yashin_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Yashin_Example-umbrella.h"; sourceTree = "<group>"; };
 		F44A7DE907B0DAE7C3F7FDFEBB585F8F /* Yashin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Yashin.modulemap; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 				F44A7DE907B0DAE7C3F7FDFEBB585F8F /* Yashin.modulemap */,
 				16AD5C17B4019FBBE3CF619985A1624D /* Yashin.xcconfig */,
 				4A8B4AD6D754E6DD857297410A637D0C /* Yashin-Private.xcconfig */,
-				9DD7C300119CD6F8E154C2C451BC3E71 /* Yashin-dummy.m */,
+				462A6CBB9AF36AB0E2755722B0673867 /* Yashin-dummy.m */,
 				F46A0FA4A5DFCFD420F373642DC5910B /* Yashin-prefix.pch */,
 				5C6154703E0F46B5D7F7A2F9B8FF67D3 /* Yashin-umbrella.h */,
 			);
@@ -159,14 +159,6 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		538C7B3BA430895CC52E4ED4002A23E8 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				9A787736D0D0C33F72549BE78F5B5601 /* ReplaceMe.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +170,7 @@
 		625EBFB8E87649F330C6C78D5D90DB64 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				538C7B3BA430895CC52E4ED4002A23E8 /* Classes */,
+				B352462772C8C987C97B6C47CE886C30 /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
@@ -219,6 +211,14 @@
 			);
 			name = "Pods-Yashin_Tests";
 			path = "Target Support Files/Pods-Yashin_Tests";
+			sourceTree = "<group>";
+		};
+		B352462772C8C987C97B6C47CE886C30 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DD6D52B5E1E56C8830DD7B729D7DDFA9 /* Yashin.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -282,7 +282,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7776277015454DDF41F0CB673A1A9A05 /* Build configuration list for PBXNativeTarget "Yashin" */;
 			buildPhases = (
-				C68DBA37271229A2679826716C3749C9 /* Sources */,
+				655C55193A7DD63A031177DFB5B65B5E /* Sources */,
 				1120DA07D4411CEC6D4B769BE7F88FC2 /* Frameworks */,
 				2888BF4699468882FE56133809BA8A8F /* Resources */,
 				60662E1EFC9A74669D86F25EADCA6260 /* Headers */,
@@ -290,7 +290,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				EA997AEDF411223A885F9D250B010090 /* PBXTargetDependency */,
+				FD7C6484411035051F75DDB7F5A4AE9D /* PBXTargetDependency */,
 			);
 			name = Yashin;
 			productName = Yashin;
@@ -325,7 +325,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				8CE3EC81162DCD7AF36BF1A46991CA91 /* PBXTargetDependency */,
+				387FFB002F635B6ACE2E19CF4FC310E3 /* PBXTargetDependency */,
 			);
 			name = "Pods-Yashin_Example";
 			productName = "Pods-Yashin_Example";
@@ -343,7 +343,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				38B063972EF9BC34532BBBC48935A90A /* PBXTargetDependency */,
+				476ADA2F19F43C7CFC86079922AE93D4 /* PBXTargetDependency */,
 			);
 			name = "Pods-Yashin_Tests";
 			productName = "Pods-Yashin_Tests";
@@ -414,6 +414,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		655C55193A7DD63A031177DFB5B65B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090E197C01B8719FBCCDA9B4EDA736D1 /* Yashin-dummy.m in Sources */,
+				505B5073B6DF7ECF8EC4AA37827F68AA /* Yashin.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1B11A900A1CD046ABC2A9E0757999B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,35 +430,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C68DBA37271229A2679826716C3749C9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C368B88D96E050CF412D478789B9D44 /* ReplaceMe.swift in Sources */,
-				1A815E6DA13E7C937ABC62897E763DCD /* Yashin-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		38B063972EF9BC34532BBBC48935A90A /* PBXTargetDependency */ = {
+		387FFB002F635B6ACE2E19CF4FC310E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Yashin;
 			target = 37BC4E00FAE3B2E7147C63DFAB7EDAB2 /* Yashin */;
-			targetProxy = B04A3D10E130B9E766C613CA69221C54 /* PBXContainerItemProxy */;
+			targetProxy = 31D3A55C9D9443148E25F51C61E74E83 /* PBXContainerItemProxy */;
 		};
-		8CE3EC81162DCD7AF36BF1A46991CA91 /* PBXTargetDependency */ = {
+		476ADA2F19F43C7CFC86079922AE93D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Yashin;
 			target = 37BC4E00FAE3B2E7147C63DFAB7EDAB2 /* Yashin */;
-			targetProxy = 5A82383D2F56C5F6BFE4C80A0E7F50E7 /* PBXContainerItemProxy */;
+			targetProxy = 5877FB3533DCC11774505EBA181C4423 /* PBXContainerItemProxy */;
 		};
-		EA997AEDF411223A885F9D250B010090 /* PBXTargetDependency */ = {
+		FD7C6484411035051F75DDB7F5A4AE9D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Yashin-Yashin";
 			target = 3BF2B5759E3C151339770078704FCD21 /* Yashin-Yashin */;
-			targetProxy = 962DC38E5B016CBBF5D176053EBCA7B8 /* PBXContainerItemProxy */;
+			targetProxy = E961AB6048F4E473E7CEDEDAE17427EC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
