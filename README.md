@@ -1,5 +1,7 @@
 # Yashin
 
+Simple Rader Chart written in Swift.
+
 [![CI Status](http://img.shields.io/travis/ushisantoasobu/Yashin.svg?style=flat)](https://travis-ci.org/ushisantoasobu/Yashin)
 [![Version](https://img.shields.io/cocoapods/v/Yashin.svg?style=flat)](http://cocoapods.org/pods/Yashin)
 [![License](https://img.shields.io/cocoapods/l/Yashin.svg?style=flat)](http://cocoapods.org/pods/Yashin)

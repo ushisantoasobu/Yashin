@@ -1,0 +1,6 @@
+framework module Yashin {
+  umbrella header "Yashin-umbrella.h"
+
+  export *
+  module * { export * }
+}

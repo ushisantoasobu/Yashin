@@ -1,0 +1,14 @@
+PODS:
+  - Yashin (0.1.0)
+
+DEPENDENCIES:
+  - Yashin (from `../`)
+
+EXTERNAL SOURCES:
+  Yashin:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Yashin: fe6bb7fbf0e1f56644d476db6b1f5884e1708684
+
+COCOAPODS: 0.38.2
