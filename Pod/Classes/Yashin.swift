@@ -1,6 +1,5 @@
 //
 //  Yashin.swift
-//  Pods
 //
 //  Created by SatoShunsuke on 2015/12/29.
 //
@@ -38,22 +37,20 @@ public class Yashin : UIView {
 
     public override func drawRect(rect: CGRect) {
 
-        // some validates
-
         if !(self.minValue < self.maxValue) {
-            print("minValue, maxValueの値がおかしい")
+            print("Invalid combination minValue and maxValue")
             return
         }
 
         let count = self.list.count
         if count < 3 {
-            print("listの数が少なすぎる")
+            print("item count of list is needed at least 3")
             return
         }
 
         let len = min(self.frame.width, self.frame.height) - padding * 2
-        if len < 100 {
-            print("viewのframeが小さすぎる")
+        if len < 60 {
+            print("frame size is too small to show")
             return
         }
 
@@ -102,7 +99,7 @@ public class Yashin : UIView {
             ]
 
             let name :NSString = self.list[index].name
-            // switch分でタプルで書きたい
+            // TODO: better code!!
             let textWidth  :CGFloat = 200.0
             let textHeight :CGFloat = 14.0
             if index == 0 {
@@ -136,12 +133,13 @@ public class Yashin : UIView {
                 rad = nextRad
                 continue
             }
-            self.subLineColor.setStroke()
+
             if self.maxValue - self.minValue < 2 {
                 rad = nextRad
                 continue
             }
 
+            self.subLineColor.setStroke()
             for scaleValue in scales {
                 let ratio :CGFloat = (scaleValue - CGFloat(self.minValue)) / CGFloat(self.maxValue - self.minValue)
                 let targetPoint = self.getPoint(center, len: len / 2 * ratio, rad: rad)
@@ -182,8 +180,8 @@ public class Yashin : UIView {
             return values
         }
         for index in 1...(10 - 1) {
-            let diff :CGFloat = CGFloat(self.maxValue - self.minValue) / 10.0
-            values.append(CGFloat(self.minValue) + diff * CGFloat(index))
+            let diff :CGFloat = CGFloat(maxValue - minValue) / 10.0
+            values.append(CGFloat(minValue) + diff * CGFloat(index))
         }
         return values
     }
