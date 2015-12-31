@@ -75,6 +75,18 @@ radarChart.list = [
 
 ## Installation
 
+### Carthage
+
+Add the following to your Cartfile:
+
+```ruby
+github "ushisantoasobu/Yashin"
+```
+
+And run `carthage update`, then add the framework as described in [Carthage Readme](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application)
+
+### CocoaPods
+
 Yashin is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
