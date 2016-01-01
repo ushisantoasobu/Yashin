@@ -90,7 +90,7 @@ public class Yashin : UIView {
             }
             fillPath.addLineToPoint(nextValuePoint)
 
-            // text
+            // draw text
             let paragraphStyle = NSMutableParagraphStyle()
             let dic = [
                 NSParagraphStyleAttributeName  : paragraphStyle,
@@ -99,34 +99,38 @@ public class Yashin : UIView {
             ]
 
             let name :NSString = self.list[index].name
-            // TODO: better code!!
             let textWidth  :CGFloat = 200.0
             let textHeight :CGFloat = 14.0
+            var textX :CGFloat = namePoint.x
+            var textY :CGFloat = namePoint.y
+
             if index == 0 {
                 paragraphStyle.alignment = NSTextAlignment.Center
-                name.drawInRect(CGRectMake(namePoint.x - textWidth / 2, namePoint.y - textHeight, textWidth, textHeight), withAttributes: dic)
+                textX = namePoint.x - textWidth / 2
+                textY = namePoint.y - textHeight
             } else if index == count / 2 && count % 2 == 0 {
                 paragraphStyle.alignment = NSTextAlignment.Center
-                name.drawInRect(CGRectMake(namePoint.x - textWidth / 2, namePoint.y, textWidth, textHeight), withAttributes: dic)
+                textX = namePoint.x - textWidth / 2
             } else if index == count / 4 && count % 4 == 0 {
                 paragraphStyle.alignment = NSTextAlignment.Left
-                name.drawInRect(CGRectMake(namePoint.x, namePoint.y - textHeight / 2, textWidth, textHeight), withAttributes: dic)
+                textY = namePoint.y - textHeight / 2
             } else if index == count / 4 * 3 && count % 4 == 0 {
                 paragraphStyle.alignment = NSTextAlignment.Right
-                name.drawInRect(CGRectMake(namePoint.x - textWidth, namePoint.y - textHeight / 2, textWidth, textHeight), withAttributes: dic)
-            } else if namePoint.x < center.x && namePoint.y < center.y {
-                paragraphStyle.alignment = NSTextAlignment.Right
-                name.drawInRect(CGRectMake(namePoint.x - textWidth, namePoint.y - textHeight, textWidth, textHeight), withAttributes: dic)
-            } else if namePoint.x > center.x && namePoint.y < center.y {
-                paragraphStyle.alignment = NSTextAlignment.Left
-                name.drawInRect(CGRectMake(namePoint.x, namePoint.y - textHeight, textWidth, textHeight), withAttributes: dic)
-            } else if namePoint.x < center.x && namePoint.y > center.y {
-                paragraphStyle.alignment = NSTextAlignment.Right
-                name.drawInRect(CGRectMake(namePoint.x - textWidth, namePoint.y, textWidth, textHeight), withAttributes: dic)
-            } else if namePoint.x > center.x && namePoint.y > center.y {
-                paragraphStyle.alignment = NSTextAlignment.Left
-                name.drawInRect(CGRectMake(namePoint.x, namePoint.y, textWidth, textHeight), withAttributes: dic)
+                textX = namePoint.x - textWidth
+                textY = namePoint.y - textHeight / 2
+            } else {
+                if namePoint.x < center.x {
+                    paragraphStyle.alignment = NSTextAlignment.Right
+                    textX = namePoint.x - textWidth
+                } else {
+                    paragraphStyle.alignment = NSTextAlignment.Left
+                }
+
+                if namePoint.y < center.y {
+                    textY = namePoint.y - textHeight
+                }
             }
+            name.drawInRect(CGRectMake(textX, textY, textWidth, textHeight), withAttributes: dic)
 
             // draw scale lines
             if scaleLineHidden {
@@ -173,7 +177,10 @@ public class Yashin : UIView {
 
     private func getScaleValues(minValue :UInt, _ maxValue :UInt) -> [CGFloat] {
         var values = [CGFloat]()
-        if (maxValue - minValue) <= 10 {
+        if (maxValue - minValue) < 2 {
+            return values
+        }
+        if (maxValue - minValue) < 10 {
             for value in (minValue + 1)...(maxValue - 1) {
                 values.append(CGFloat(value))
             }
