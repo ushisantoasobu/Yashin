@@ -2,6 +2,7 @@
 
 Simple Rader Chart written in Swift.
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CI Status](http://img.shields.io/travis/ushisantoasobu/Yashin.svg?style=flat)](https://travis-ci.org/ushisantoasobu/Yashin)
 [![Version](https://img.shields.io/cocoapods/v/Yashin.svg?style=flat)](http://cocoapods.org/pods/Yashin)
 [![License](https://img.shields.io/cocoapods/l/Yashin.svg?style=flat)](http://cocoapods.org/pods/Yashin)
