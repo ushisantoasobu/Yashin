@@ -24,27 +24,16 @@ class ViewController: UIViewController {
 
     private func setupRadarChart() {
         let radarChart = Yashin(frame: self.view.frame)
-
-        radarChart.maxValue = 100
-        radarChart.minValue = 0
-        //        radarChart.padding += 10
-        radarChart.fontSize = 10.0
-        radarChart.scaleLineWidth = 2.0
-        //        radarChart.scaleLineHidden = true
-
         self.view.addSubview(radarChart)
 
         radarChart.list = [
-            ("攻撃力", 82),
-            ("守備力", 72),
-            ("ボディ", 84),
-            ("体力", 88),
-            ("パス", 82),
-            ("シュート", 77),
-            ("ドリブル", 76),
-            ("ヘディング", 81),
-            ("安定性", 85),
-            ("メンタリティ", 88),
+            ("shoot", 7),
+            ("pass", 9),
+            ("dribble", 5),
+            ("speed", 8),
+            ("power", 6),
+            ("stamina", 5),
+            ("mentality", 7)
         ]
     }
 
