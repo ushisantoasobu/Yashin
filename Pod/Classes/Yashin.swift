@@ -10,7 +10,11 @@ import UIKit
 
 public class Yashin : UIView {
 
-    public var list = [(name :String, value :UInt)]()
+    public typealias Value = ([UInt], UIColor)
+
+    private var keys   = [String]()
+    private var values = [Value]()
+
     public var minValue :UInt = 0
     public var maxValue :UInt = 10
     public var padding :CGFloat = 60
@@ -22,8 +26,7 @@ public class Yashin : UIView {
 
     // color
     public var lineColor    = UIColor.darkGrayColor()
-    public var subLineColor = UIColor.darkGrayColor().colorWithAlphaComponent(0.30)
-    public var fillColor    = UIColor.darkGrayColor().colorWithAlphaComponent(0.20)
+    public var subLineColor = UIColor.darkGrayColor().colorWithAlphaComponent(0.50)
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,60 +38,58 @@ public class Yashin : UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    public func set(keys :[String], _ values :[Value]) {
+        self.keys = keys
+        self.values = values
+    }
+
     public override func drawRect(rect: CGRect) {
 
-        if !(self.minValue < self.maxValue) {
+        if !self.validateMinAndMax() {
             print("Invalid combination minValue and maxValue")
             return
         }
 
-        let count = self.list.count
-        if count < 3 {
-            print("item count of list is needed at least 3")
+        if !self.validateKeyCount() {
+            print("key count is needed at least 3")
             return
         }
 
-        let len = min(self.frame.width, self.frame.height) - padding * 2
-        if len < 60 {
+        if !self.validateIntegrityKeyAndValue() {
+            print("invalid combination key and value")
+            return
+        }
+
+        if !self.validateSufficientFrame() {
             print("frame size is too small to show")
             return
         }
 
+        let keyCount   = self.keys.count
+        let valueCount = self.values.count
+        let len = min(self.frame.width, self.frame.height) - padding * 2
         let center = CGPointMake(self.center.x - self.frame.origin.x, self.center.y - self.frame.origin.y)
-
-        let fillPath = UIBezierPath()
-
-        var rad :CGFloat = 2 * CGFloat(M_PI) * 3 / 4
-
         let scales :[CGFloat] = self.getScaleValues(self.minValue, self.maxValue)
 
-        for (index, data) in self.list.enumerate() {
+        var rad :CGFloat = 2 * CGFloat(M_PI) * 3 / 4
+        var maxPoints    = [CGPoint]()
+        var valuePoints  = Array(count: valueCount, repeatedValue: [CGPoint]())
 
-            self.lineColor.setStroke()
+        for (index, key) in self.keys.enumerate() {
 
-            let valueRatio :CGFloat = min(1.0, (CGFloat(data.value) - CGFloat(self.minValue)) / CGFloat(self.maxValue - self.minValue))
-            let currentMaxPoint   = self.getPoint(center, len: len / 2, rad: rad)
-            let currentValuePoint = self.getPoint(center, len: len * valueRatio / 2, rad: rad)
+            let currentMaxPoint = self.getPoint(center, len: len / 2, rad: rad)
+            maxPoints.append(currentMaxPoint)
 
-            let namePoint = self.getPoint(center, len: (len + 10) / 2, rad: rad)
+            for (valueIndex, value) in self.values.enumerate() {
+                let values :[UInt] = value.0
+                let valueRatio :CGFloat = min(1.0, (CGFloat(values[index]) - CGFloat(self.minValue)) / CGFloat(self.maxValue - self.minValue))
+                let point = self.getPoint(center, len: len * valueRatio / 2, rad: rad)
+                valuePoints[valueIndex].append(point)
+            }
 
-            let nextRad = rad + 2 * CGFloat(M_PI) / CGFloat(count)
-
-            let nextValueRatio = (index == self.list.count - 1) ?
-                min(1.0, (CGFloat(self.list[0].value) - CGFloat(self.minValue)) / CGFloat(self.maxValue - self.minValue)) :
-                min(1.0, (CGFloat(self.list[index + 1].value) - CGFloat(self.minValue)) / CGFloat(self.maxValue - self.minValue))
-            let nextMaxPoint   = self.getPoint(center, len: len / 2, rad: nextRad)
-            let nextValuePoint = self.getPoint(center, len: len * nextValueRatio / 2, rad: nextRad)
-
-            self.drawLine(currentMaxPoint, nextMaxPoint)
-
+            // draw inner-line
             self.subLineColor.setStroke()
             self.drawLine(currentMaxPoint, center)
-
-            if index == 0 {
-                fillPath.moveToPoint(currentValuePoint)
-            }
-            fillPath.addLineToPoint(nextValuePoint)
 
             // draw text
             let paragraphStyle = NSMutableParagraphStyle()
@@ -97,8 +98,7 @@ public class Yashin : UIView {
                 NSForegroundColorAttributeName : self.lineColor,
                 NSFontAttributeName            : UIFont.systemFontOfSize(self.fontSize)
             ]
-
-            let name :NSString = self.list[index].name
+            let namePoint = self.getPoint(center, len: (len + 10) / 2, rad: rad)
             let textWidth  :CGFloat = 200.0
             let textHeight :CGFloat = 14.0
             var textX :CGFloat = namePoint.x
@@ -108,13 +108,13 @@ public class Yashin : UIView {
                 paragraphStyle.alignment = NSTextAlignment.Center
                 textX = namePoint.x - textWidth / 2
                 textY = namePoint.y - textHeight
-            } else if index == count / 2 && count % 2 == 0 {
+            } else if index == keyCount / 2 && keyCount % 2 == 0 {
                 paragraphStyle.alignment = NSTextAlignment.Center
                 textX = namePoint.x - textWidth / 2
-            } else if index == count / 4 && count % 4 == 0 {
+            } else if index == keyCount / 4 && keyCount % 4 == 0 {
                 paragraphStyle.alignment = NSTextAlignment.Left
                 textY = namePoint.y - textHeight / 2
-            } else if index == count / 4 * 3 && count % 4 == 0 {
+            } else if index == keyCount / 4 * 3 && keyCount % 4 == 0 {
                 paragraphStyle.alignment = NSTextAlignment.Right
                 textX = namePoint.x - textWidth
                 textY = namePoint.y - textHeight / 2
@@ -130,19 +130,15 @@ public class Yashin : UIView {
                     textY = namePoint.y - textHeight
                 }
             }
-            name.drawInRect(CGRectMake(textX, textY, textWidth, textHeight), withAttributes: dic)
+            key.drawInRect(CGRectMake(textX, textY, textWidth, textHeight), withAttributes: dic)
+
+            let nextRad = rad + 2 * CGFloat(M_PI) / CGFloat(keyCount)
 
             // draw scale lines
-            if scaleLineHidden {
+            if scaleLineHidden || (self.maxValue - self.minValue < 2) {
                 rad = nextRad
                 continue
             }
-
-            if self.maxValue - self.minValue < 2 {
-                rad = nextRad
-                continue
-            }
-
             self.subLineColor.setStroke()
             for scaleValue in scales {
                 let ratio :CGFloat = (scaleValue - CGFloat(self.minValue)) / CGFloat(self.maxValue - self.minValue)
@@ -157,8 +153,56 @@ public class Yashin : UIView {
             rad = nextRad
         }
 
-        self.fillColor.setFill()
-        fillPath.fill()
+        // draw outer-line
+        for (index, _) in maxPoints.enumerate() {
+            self.lineColor.setStroke()
+            if index == maxPoints.count - 1 {
+                self.drawLine(maxPoints[index], maxPoints[0])
+            } else {
+                self.drawLine(maxPoints[index], maxPoints[index + 1])
+            }
+        }
+
+        // fill value
+        for (index, points) in valuePoints.enumerate() {
+            let fillColor :UIColor = self.values[index].1
+            let fillPath = UIBezierPath()
+            fillColor.setFill()
+            for (subIndex, point) in points.enumerate() {
+                if subIndex == 0 {
+                    fillPath.moveToPoint(point)
+                }
+                fillPath.addLineToPoint(point)
+            }
+            fillPath.fill()
+        }
+
+    }
+
+    // MARK: - validate
+
+    internal func validateMinAndMax() -> Bool {
+        return self.minValue < self.maxValue
+    }
+
+    internal func validateKeyCount() -> Bool {
+        let count = self.keys.count
+        return !(count < 3)
+    }
+
+    internal func validateIntegrityKeyAndValue() -> Bool {
+        let count = self.keys.count
+        for value in self.values {
+            if value.0.count != count {
+                return false
+            }
+        }
+        return true
+    }
+
+    internal func validateSufficientFrame() -> Bool {
+        let len = min(self.frame.width, self.frame.height) - padding * 2
+        return !(len < 60)
     }
 
     // MARK: - private funcs

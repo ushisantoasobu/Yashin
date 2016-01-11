@@ -26,15 +26,14 @@ class ViewController: UIViewController {
         let radarChart = Yashin(frame: self.view.frame)
         self.view.addSubview(radarChart)
 
-        radarChart.list = [
-            ("shoot", 7),
-            ("pass", 9),
-            ("dribble", 5),
-            ("speed", 8),
-            ("power", 6),
-            ("stamina", 5),
-            ("mentality", 7)
-        ]
+        radarChart.set(
+            ["shoot", "pass", "dribble", "speed", "power", "stamina", "mentality"],
+            [
+                ([6,9,5,8,7,4,6], UIColor.greenColor().colorWithAlphaComponent(0.40)),
+                ([7,6,7,7,8,8,6], UIColor.blackColor().colorWithAlphaComponent(0.40)),
+                ([8,7,8,7,7,9,5], UIColor.redColor().colorWithAlphaComponent(0.40))
+            ]
+        )
     }
 
 }
