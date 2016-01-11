@@ -26,15 +26,10 @@ class SomeViewController: UIViewController {
         let radarChart = Yashin(frame: self.view.frame)
         self.view.addSubview(radarChart)
 
-        radarChart.list = [
-            ("shoot", 7),
-            ("pass", 9),
-            ("dribble", 5),
-            ("speed", 8),
-            ("power", 6),
-            ("stamina", 5),
-            ("mentality", 7)
-        ]
+        radarChart.set(
+            ["shoot", "pass", "dribble", "speed", "power", "stamina", "mentality"],
+            [([8,9,8,8,7,6,9], UIColor.greenColor().colorWithAlphaComponent(0.40))]
+        )
     }
 }
 ```
@@ -55,22 +50,31 @@ radarChart.scaleLineWidth = 4.0 // Scale-line width. Default is 2.0
 radarChart.scaleLineHidden = false // Scale-line hidden flag. Default is false
 
 // color
-radarChart.lineColor = UIColor.brownColor() // Color of chart outer-line. Default is XXX
-radarChart.subLineColor = UIColor.lightGrayColor() // Color of chart inner-line. Default is XXX
-radarChart.fillColor = UIColor.cyanColor().colorWithAlphaComponent(0.30) // Color of chart fill. Default is XXX
+radarChart.lineColor = UIColor.brownColor() // Color of chart outer-line. Default is UIColor.darkGrayColor()
+radarChart.subLineColor = UIColor.lightGrayColor() // Color of chart inner-line. Default is UIColor.darkGrayColor().colorWithAlphaComponent(0.50)
 
-radarChart.list = [
-    ("shoot", 70),
-    ("pass", 91),
-    ("dribble", 58),
-    ("speed", 84),
-    ("power", 67),
-    ("stamina", 56),
-    ("mentality", 78),
-]
+radarChart.set(
+    ["shoot", "pass", "dribble", "speed", "power", "stamina", "mentality"],
+    [([84,91,88,83,75,60,94], UIColor.greenColor().colorWithAlphaComponent(0.40))]
+)
 ```
 
 <img src="https://github.com/ushisantoasobu/Yashin/blob/master/screenshots/2.png" width="320">
+
+### Setting multi data
+
+```Swift
+radarChart.set(
+    ["shoot", "pass", "dribble", "speed", "power", "stamina", "mentality"],
+    [
+        ([6,9,5,8,7,4,6], UIColor.greenColor().colorWithAlphaComponent(0.40)),
+        ([7,6,7,7,8,8,6], UIColor.blackColor().colorWithAlphaComponent(0.40)),
+        ([8,7,8,7,7,9,5], UIColor.redColor().colorWithAlphaComponent(0.40))
+    ]
+)
+```
+
+<img src="https://github.com/ushisantoasobu/Yashin/blob/master/screenshots/3.png" width="320">
 
 ## Requirements
 
