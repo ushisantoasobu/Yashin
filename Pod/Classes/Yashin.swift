@@ -181,16 +181,16 @@ public class Yashin : UIView {
 
     // MARK: - validate
 
-    internal func validateMinAndMax() -> Bool {
+    public func validateMinAndMax() -> Bool {
         return self.minValue < self.maxValue
     }
 
-    internal func validateKeyCount() -> Bool {
+    public func validateKeyCount() -> Bool {
         let count = self.keys.count
         return !(count < 3)
     }
 
-    internal func validateIntegrityKeyAndValue() -> Bool {
+    public func validateIntegrityKeyAndValue() -> Bool {
         let count = self.keys.count
         for value in self.values {
             if value.0.count != count {
@@ -200,7 +200,7 @@ public class Yashin : UIView {
         return true
     }
 
-    internal func validateSufficientFrame() -> Bool {
+    public func validateSufficientFrame() -> Bool {
         let len = min(self.frame.width, self.frame.height) - padding * 2
         return !(len < 60)
     }
