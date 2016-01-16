@@ -78,6 +78,9 @@ radarChart.set(
 
 ## Requirements
 
+- iOS 9.0 or later
+- Xcode 7.2
+
 ## Installation
 
 ### Carthage
