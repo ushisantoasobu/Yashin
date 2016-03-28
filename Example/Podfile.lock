@@ -1,5 +1,5 @@
 PODS:
-  - Yashin (0.1.0)
+  - Yashin (0.3.1)
 
 DEPENDENCIES:
   - Yashin (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Yashin: fe6bb7fbf0e1f56644d476db6b1f5884e1708684
+  Yashin: 954aa2e5594b745b8da3ca3ed008361b62476248
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
